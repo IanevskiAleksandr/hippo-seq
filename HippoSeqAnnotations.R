@@ -1,5 +1,3 @@
-#!/usr/bin/env Rscript
-
 # Load required libraries
 required_packages <- c("dplyr", "tidyr", "tibble", "data.table", "openxlsx", 
                        "ggplot2", "patchwork", "tools", "scales", "jsonlite")
@@ -10,33 +8,13 @@ for (pkg in required_packages) {
 }
 
 suppressPackageStartupMessages({
-  library(dplyr)
-  library(tidyr)
-  library(tibble)
-  library(data.table)
-  library(openxlsx)
-  library(ggplot2)
-  library(patchwork)
-  library(jsonlite)
+  library(dplyr); library(tidyr); library(tibble); library(data.table); library(openxlsx); library(ggplot2); library(patchwork); library(jsonlite)
 })
 
-# Get command line arguments
-args <- commandArgs(trailingOnly = TRUE)
-
-#saveRDS(args, "args.RDS")
-
-if (length(args) != 2) {
-  stop("Usage: Rscript CellType.R <input_file> <output_directory>")
-}
-
-input_file <- args[1]
-output_dir <- args[2]
-#input_file = paste0(output_dir, "/", input_file)
-
-# Set output files
-markers_file <- file.path("/var/www/html/testhippo", "markersMouseHippo.xlsx")
-output_file <- file.path(output_dir, "umap_clusters_and_types.pdf")
-json_file <- file.path(output_dir, "results.json")
+# Set input/output files
+markers_file <- "markersMouseHippo.xlsx"
+output_file <- "umap_clusters_and_types.pdf"
+json_file <- "results.json"
 
 
 #' Smart File Reader for Compressed and Uncompressed Files with Command Line Support
