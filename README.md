@@ -5,7 +5,7 @@ A comprehensive resource for single-cell transcriptomic analysis of the mouse hi
 ## Core Features
 
 ### Hippocampus Cell Atlas (HCA)
-- >420,000 cells across 33 distinct cell types
+- 424k cells across 33 distinct cell types
 - Interactive visualization and gene expression analysis
 - Advanced co-expression analysis tools
 
